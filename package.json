@@ -1,0 +1,39 @@
+{
+  "name": "uptick-week_3",
+  "version": "1.0.0",
+  "description": "CRUD Backend app",
+  "keywords": [
+    "CRUD",
+    "Backend",
+    "Api",
+    "Note",
+    "Todo"
+  ],
+  "homepage": "https://github.com/Odewale-Emmanuel/Uptick-Week_3#readme",
+  "bugs": {
+    "url": "https://github.com/Odewale-Emmanuel/Uptick-Week_3/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Odewale-Emmanuel/Uptick-Week_3.git"
+  },
+  "license": "MIT License",
+  "author": "Emmanuel Odewale",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "dev": "nodemon server.js",
+    "build": "echo \"Error: no build specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "http-errors": "^2.0.0",
+    "nodemon": "^3.1.10",
+    "uuid": "^11.1.0"
+  }
+}
