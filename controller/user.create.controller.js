@@ -1,5 +1,4 @@
 const db = require("../models/index");
-const { v1: uuidv1 } = require("uuid");
 
 async function createUser(req, res, next) {
   try {
