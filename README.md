@@ -1,6 +1,6 @@
 # Uptick Week 3
 
-## working on post, delete, and put request
+## working on put/patch request
 
 ## CRUD Backend Application with Express, Sequelize, and PostgreSQL
 
