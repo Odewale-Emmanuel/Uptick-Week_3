@@ -1,8 +1,8 @@
-// import express from "express";
-// import getUser from "../controller/user.controller";
+const express = require("express");
+const createUser = require("../controller/user.create.controller");
 
-// const router = express.Router();
+const router = express.Router();
 
-// router.get("/", getUser);
+router.post("/", createUser);
 
-// export default router;
+module.exports = router;
