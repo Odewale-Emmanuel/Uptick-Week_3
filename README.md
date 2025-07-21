@@ -1,7 +1,5 @@
 # Uptick Week 3
 
-## working on put/patch request
-
 ## CRUD Backend Application with Express, Sequelize, and PostgreSQL
 
 This backend application provides a RESTful API for managing users and their notes. Built with Express.js, it leverages Sequelize ORM to interact with a PostgreSQL database. Users can register, authenticate, and create, read, update, and delete their personal notes.
