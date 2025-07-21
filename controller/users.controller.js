@@ -1,5 +1,3 @@
-const Sequelize = require("sequelize");
-const createHttpError = require("http-errors");
 const db = require("../models/index");
 
 async function getAllUsers(req, res, next) {
@@ -10,7 +8,7 @@ async function getAllUsers(req, res, next) {
     console.error(error);
     res
       .status(500)
-      .send("An error occurred while trying to get requested information.");
+      .send("An error occurred while trying to get all user information.");
   }
 }
 

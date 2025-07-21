@@ -1,10 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-// const dotenv = require("dotenv");
-// const createHttpError = require("http-errors");
 const cookieParser = require("cookie-parser");
-// const db = require("./models/index.js");
 const userRouter = require("./routes/user.route");
+const userNoteRouter = require("./routes/user.notes.route.js");
 const removeUserRouter = require("./routes/remove.user.route");
 const removeNoteRouter = require("./routes/remove.note.route");
 const updateNoteRouter = require("./routes/update.note.route.js");
@@ -28,6 +26,7 @@ app.get("/", async (req, res) => {
 });
 
 app.use("/user", userRouter);
+app.use("/user-note", userNoteRouter);
 app.use("/remove-user", removeUserRouter);
 app.use("/remove-note", removeNoteRouter);
 app.use("/update-note", updateNoteRouter);

@@ -1,4 +1,3 @@
-const { where, Op } = require("sequelize");
 const db = require("../models/index");
 
 async function getUser(req, res, next) {
@@ -6,9 +5,7 @@ async function getUser(req, res, next) {
     const { id } = req.query;
     const user = await db.user.findAll({
       where: {
-        id: {
-          [Op.eq]: id,
-        },
+        id: id,
       },
     });
 

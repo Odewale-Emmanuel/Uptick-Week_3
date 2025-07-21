@@ -1,4 +1,3 @@
-const { where, Op } = require("sequelize");
 const db = require("../models/index");
 
 async function updateNote(req, res, next) {
@@ -7,9 +6,7 @@ async function updateNote(req, res, next) {
 
     const note = await db.note.findOne({
       where: {
-        id: {
-          [Op.eq]: id,
-        },
+        id: id,
       },
     });
 

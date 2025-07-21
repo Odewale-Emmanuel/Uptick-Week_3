@@ -1,5 +1,4 @@
-const { where, Op } = require("sequelize");
-const createHttpError = require("http-errors");
+const { Op } = require("sequelize");
 const db = require("../models/index");
 
 async function getUserNotes(req, res, next) {

@@ -1,6 +1,6 @@
 const db = require("../models/index");
 
-async function createUser(req, res, next) {
+async function createNote(req, res, next) {
   try {
     await db.note.create(req.body);
     res.status(201).send("note created successfully");
@@ -12,4 +12,4 @@ async function createUser(req, res, next) {
   }
 }
 
-module.exports = createUser;
+module.exports = createNote;
