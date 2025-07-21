@@ -4,6 +4,7 @@ const cors = require("cors");
 // const createHttpError = require("http-errors");
 const cookieParser = require("cookie-parser");
 // const db = require("./models/index.js");
+const userRouter = require("./routes/user.route");
 const usersRouter = require("./routes/users.route");
 const notesRouter = require("./routes/notes.route.js");
 const createUserRouter = require("./routes/user.create.route.js");
@@ -23,6 +24,7 @@ app.get("/", async (req, res) => {
   }
 });
 
+app.use("/user", userRouter);
 app.use("/users", usersRouter);
 app.use("/notes", notesRouter);
 app.use("/create-user", createUserRouter);
