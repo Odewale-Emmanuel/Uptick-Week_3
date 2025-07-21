@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 const userRouter = require("./routes/user.route");
 const removeUserRouter = require("./routes/remove.user.route");
 const removeNoteRouter = require("./routes/remove.note.route");
+const updateNoteRouter = require("./routes/update.note.route.js");
 const usersRouter = require("./routes/users.route");
 const notesRouter = require("./routes/notes.route.js");
 const createUserRouter = require("./routes/user.create.route.js");
@@ -29,6 +30,7 @@ app.get("/", async (req, res) => {
 app.use("/user", userRouter);
 app.use("/remove-user", removeUserRouter);
 app.use("/remove-note", removeNoteRouter);
+app.use("/update-note", updateNoteRouter);
 app.use("/users", usersRouter);
 app.use("/notes", notesRouter);
 app.use("/create-user", createUserRouter);
