@@ -1,6 +1,8 @@
 "use strict";
-import { Model } from "sequelize";
-const user = (sequelize, DataTypes) => {
+
+const { Model } = require("sequelize");
+
+module.exports = (sequelize, DataTypes) => {
   class user extends Model {
     /**
      * Helper method for defining associations.
@@ -11,6 +13,7 @@ const user = (sequelize, DataTypes) => {
       // define association here
     }
   }
+
   user.init(
     {
       id: {
@@ -46,7 +49,6 @@ const user = (sequelize, DataTypes) => {
       timestamps: true,
     }
   );
+
   return user;
 };
-
-export default user;

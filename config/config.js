@@ -1,15 +1,13 @@
-import dotenv from "dotenv";
-import fs from "fs";
+require("dotenv").config();
+const fs = require("fs");
 
-dotenv.config();
-
-const config = {
+module.exports = {
   development: {
     username: process.env.DATABASE_USERNAME,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
     host: process.env.DATABASE_HOST,
-    dialect: "postgres",
+    dialect: process.env.DATABASE_DIALECT || "postgres",
     dialectOptions: {
       bigNumberStrings: true,
     },
@@ -19,7 +17,7 @@ const config = {
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
     host: process.env.DATABASE_HOST,
-    dialect: "postgres",
+    dialect: process.env.DATABASE_DIALECT || "postgres",
     dialectOptions: {
       bigNumberStrings: true,
     },
@@ -29,11 +27,9 @@ const config = {
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
     host: process.env.DATABASE_HOST,
-    dialect: "postgres",
+    dialect: process.env.DATABASE_DIALECT || "postgres",
     dialectOptions: {
       bigNumberStrings: true,
     },
   },
 };
-
-export default config;

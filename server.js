@@ -1,17 +1,27 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
-import createHttpError from "http-errors";
-import cookieParser from "cookie-parser";
+const express = require("express");
+const cors = require("cors");
+// const dotenv = require("dotenv");
+// const createHttpError = require("http-errors");
+const cookieParser = require("cookie-parser");
+// const db = require("./models/index.js");
+const usersRouter = require("./routes/users.route");
+const notesRouter = require("./routes/notes.route.js");
 
 const app = express();
 const port = 3000;
 
 app.use(cors(), cookieParser());
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get("/", async (req, res) => {
+  try {
+    res.send("my second server using express");
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch users" });
+  }
 });
+
+app.use("/users", usersRouter);
+app.use("/notes", notesRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port: ${port}`);

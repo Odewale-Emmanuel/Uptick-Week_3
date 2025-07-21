@@ -19,7 +19,7 @@
   },
   "license": "MIT License",
   "author": "Emmanuel Odewale",
-  "type": "module",
+  "type": "commonjs",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",

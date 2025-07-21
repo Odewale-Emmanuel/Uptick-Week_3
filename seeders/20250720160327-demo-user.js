@@ -1,8 +1,7 @@
 "use strict";
-import { v1 as UUIDv1, v4 as UUIDv4 } from "uuid";
 
 /** @type {import('sequelize-cli').Migration} */
-export default {
+module.exports = {
   async up(queryInterface, Sequelize) {
     /**
      * Add seed commands here.

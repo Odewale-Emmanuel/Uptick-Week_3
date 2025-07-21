@@ -1,6 +1,8 @@
 "use strict";
-import Model from "sequelize";
-const note = (sequelize, DataTypes) => {
+
+const { Model } = require("sequelize");
+
+module.exports = (sequelize, DataTypes) => {
   class note extends Model {
     /**
      * Helper method for defining associations.
@@ -11,11 +13,6 @@ const note = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  note.belongsTo(models.user, {
-    foreignKey: "user_id", // The foreign key in the note table
-    targetKey: "id", // The primary key in the user table
-    onDelete: "CASCADE", // Optionally, you can add cascade delete here
-  });
 
   note.init(
     {
@@ -60,7 +57,6 @@ const note = (sequelize, DataTypes) => {
       timestamps: true,
     }
   );
+
   return note;
 };
-
-export default note;
