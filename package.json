@@ -29,7 +29,6 @@
     "seed": "npx sequelize-cli db:seed:all",
     "seed:undo": "npx sequelize-cli db:seed:undo",
     "seed:undo:all": "npx sequelize-cli db:seed:undo:all",
-    "": "npx sequelize-cli db:seed:undo --seed name-of-seed-as-in-data",
     "build": "echo \"Error: no build specified\" && exit 1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
